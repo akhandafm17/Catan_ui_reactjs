@@ -1,0 +1,29 @@
+@import '/src/styles/mixins';
+
+.edit{
+  @include border;
+  padding: 1rem;
+
+  .inputSection {
+    margin-bottom: 0.5rem;
+  }
+
+  .whiteTextField {
+    input {
+      color: #BFA181; // Witte tekstkleur binnen het Textfield
+      border: 1px solid #BFA181; // Witte rand om het Textfield
+      border-radius: 4px; // Optioneel: afgeronde hoeken voor het Textfield
+      padding: 10px; // Optioneel: aanpassen van de opvulling
+    }
+
+    label {
+      color: #BFA181; // Witte kleur voor het label (bijv. "Gebruikersnaam")
+    }
+  }
+
+  h2,
+  p {
+    color: #BFA181;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,12 @@
+@import '/src/styles/variables';
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border-top: 2px solid #BFA181;
+  background-color: $background;
+  font-size: 1rem;
+  color: #178582;
+}

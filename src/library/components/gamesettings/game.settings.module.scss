@@ -1,0 +1,43 @@
+@import '/src/styles/mixins';
+
+.gamesettings{
+  @include border;
+  padding: 1rem;
+  color: #BFA181;
+
+  .openLobbyHeader {
+    text-shadow: -0.0625rem -0.0625rem 0 #000,
+    0.0625rem -0.0625rem 0 #000,
+    -0.0625rem 0.0625rem 0 #000,
+    0.0625rem 0.0625rem 0 #000;
+  }
+
+  .friendGrid {
+    @include border;
+    padding: 0.5rem;
+
+    .profileInfo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      .profilePicture {
+        max-width: 3rem;
+        max-height: 3rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .alert {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+}

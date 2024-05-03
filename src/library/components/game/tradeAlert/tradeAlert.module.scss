@@ -1,0 +1,30 @@
+.tradeCard {
+  position: relative;
+  border: 1px solid white;
+
+  .tradeCardIndex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .imgcontainer {
+      margin: 0.125rem;
+      text-align: center;
+
+      .img {
+        width: 1.8rem;
+      }
+
+      p {
+        margin: 0.2rem 0;
+      }
+    }
+  }
+
+  .iconWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

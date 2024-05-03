@@ -1,0 +1,77 @@
+@import '/src/styles/variables';
+
+.header {
+  background-color: $background;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #BFA181;
+
+  h1 {
+    margin-left: 1rem;
+    color: #178582;
+    font-family: Algerian, sans-serif;
+  }
+
+  .divLoginButton {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    color: #178582;
+
+    .loginButton {
+      border-radius: 1rem;
+    }
+
+    .nickName {
+      font-weight: bold;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+    }
+
+  }
+
+  .logoNav {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    .headerItem {
+      margin: 0 1rem;
+      font-weight: bold;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+      color: #178582;
+
+      &:hover {
+        color: darken(#178582, 10%);
+        cursor: pointer;
+      }
+    }
+
+    .logo {
+      margin: 0 1rem
+    }
+  }
+
+  .customSelect {
+    position: relative;
+    width: fit-content;
+
+    .dropdownIcon {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .select {
+      padding-right: 30px; /* Ruimte voor de aangepaste pijl */
+    }
+
+    .hiddenIcon {
+      display: none; /* Verberg de standaard pijl van Select */
+    }
+  }
+}
+

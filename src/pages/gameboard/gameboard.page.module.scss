@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../assets/sea.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  .section {
+    border: 0.0625rem solid black;
+    padding: 1.25rem;
+  }
+
+  .section:first-child,
+  .section:last-child {
+    flex: 20;
+  }
+
+  .section:nth-child(2) {
+    flex: 60;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .blinking {
+    color: red;
+    animation: blink 1s step-start 0s infinite;
+  }
+}
+
+
+
+
+

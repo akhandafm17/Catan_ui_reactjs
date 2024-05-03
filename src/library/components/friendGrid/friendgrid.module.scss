@@ -1,0 +1,19 @@
+@import '/src/styles/mixins';
+
+.friendGrid {
+  @include border;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  .profileInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    .profilePicture {
+      max-width: 3rem;
+      max-height: 3rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

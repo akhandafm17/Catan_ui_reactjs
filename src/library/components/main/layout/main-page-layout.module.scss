@@ -1,0 +1,75 @@
+@use 'sass:math';
+@import '/src/styles/variables';
+
+// do not convert to rem or em because sizes are used in media queries
+$grid-gutter-width: 30px !default;
+// Extra small screen / phone
+$screen-xs-min: $screen-xs !default;
+$container-xs: 100% !default;
+// Small screen / tablet
+$container-sm: (720px + $grid-gutter-width) !default;
+$screen-sm-min: $screen-sm !default;
+// Medium screen / desktop
+$container-md: (940px + $grid-gutter-width) !default;
+$screen-md-min: $screen-md !default;
+// Large screen / wide desktop
+$container-lg: (1140px + $grid-gutter-width) !default;
+$screen-lg-min: $screen-lg !default;
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table; // 2
+    content: ' '; // 1
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  padding-right: ceil(math.div($gutter, 2));
+  padding-left: floor(math.div($gutter, 2));
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $background;
+}
+
+.footerDivider {
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.content {
+  margin-top: 1rem;
+  padding: 0;
+  align-self: center;
+
+  // standard
+  @include container-fixed;
+  width: $container-xs;
+
+  //responsive breakpoints
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}

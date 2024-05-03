@@ -1,0 +1,31 @@
+.gameinformationContent {
+  color: white;
+  max-height: 90vh;
+  overflow-y: auto; /* Hiermee wordt een verticale scrollbalk toegevoegd indien nodig */
+
+  &::-webkit-scrollbar {
+    width: 12px; /* breedte van de scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* achtergrond van de track (de "rails" van de scrollbar) */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent; /* kleur van de thumb (het beweegbare deel van de scrollbar) */
+    border-radius: 6px; /* afgeronde hoeken van de thumb */
+  }
+
+}
+
+.btnInformation{
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Ruimte tussen de knoppen */
+  align-items: center;
+
+  .btn{
+    text-transform: none;
+  }
+
+}

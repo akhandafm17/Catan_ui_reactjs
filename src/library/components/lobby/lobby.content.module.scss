@@ -1,0 +1,119 @@
+@import '/src/styles/mixins';
+@import '/src/styles/variables';
+
+.card {
+  color: #BFA181;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 1rem;
+  @include border;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cardWithButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.createdBy {
+  position: absolute;
+  bottom: 5px;
+  left: 13px;
+}
+
+.lobbyName {
+  color: #BFA181;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.playerSize {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.lobbyInformation{
+  padding: 1rem;
+  @include border;
+  margin-bottom: 2rem;
+}
+
+.lobbyFiltering {
+  border-radius: 8px;
+
+  .filterContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .filterMake{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 20px;
+  }
+
+  .txtfield{
+    input {
+      color: #BFA181; // Witte tekstkleur binnen het Textfield
+      border: 1px solid #BFA181; // Witte rand om het Textfield
+      border-radius: 4px; // Optioneel: afgeronde hoeken voor het Textfield
+      padding: 10px; // Optioneel: aanpassen van de opvulling
+    }
+
+    label {
+      color: #BFA181; // Witte kleur voor het label (bijv. "Gebruikersnaam")
+    }
+  }
+}
+
+.tabButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.tabButton {
+  margin-bottom: 1rem;
+  background-color: $background;
+  color: #BFA181;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tabButton:hover {
+  color: darken(#BFA181, 10%);
+}
+
+/* Nieuwe klasse toegevoegd voor kaarten met knoppen */
+.cardWithButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

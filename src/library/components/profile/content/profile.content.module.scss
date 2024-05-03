@@ -1,0 +1,62 @@
+@import '/src/styles/mixins';
+
+.profileWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    @include border;
+    color: #BFA181;
+}
+
+.profileInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Plaats elementen verticaal binnen de container */
+    height: 100%; /* Laat de container de volledige hoogte van de parent innemen */
+}
+
+.textContainer {
+    margin-bottom: 0.5rem;
+}
+
+.buttonsContainer {
+    margin-top: auto;
+}
+
+.avatarContainer img {
+    max-width: 250px;
+    max-height: 250px;
+    align-self: flex-end;
+}
+
+.friends{
+    margin-top: 1rem;
+    padding: 1rem;
+    @include border;
+    color: #BFA181;
+    margin-bottom: 1rem;
+
+    .addBtn{
+        margin-bottom: 0.5rem;
+    }
+
+    .friendGrid {
+        @include border;
+        padding: 0.5rem;
+        cursor: pointer;
+
+        .profileInfo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+
+            .profilePicture {
+                max-width: 3rem;
+                max-height: 3rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
